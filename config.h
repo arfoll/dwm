@@ -55,7 +55,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "uxterm", NULL };
+static const char *termcmd[]  = { "urxvt", "-rv", NULL };
 
 /* audio */
 static const char *volup[] = { "amixer", "set", "Master", "5%+", "unmute", NULL };
