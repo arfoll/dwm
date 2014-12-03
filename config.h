@@ -55,7 +55,11 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "urxvt", "-rv", NULL };
+static const char *termcmdr[]  = { "urxvt", "-rv", NULL };
+static const char *termcmd[]  = { "urxvt",  NULL };
+static const char *firefox[] = { "firefox", NULL };
+static const char *chromium[] = { "chromium", NULL };
+static const char *pidgin[] = { "pidgin", NULL};
 
 /* audio */
 static const char *volup[] = { "amixer", "set", "Master", "5%+", "unmute", NULL };
@@ -78,7 +82,11 @@ static Key keys[] = {
         { 0,                            XF86XK_MonBrightnessDown,   spawn, {.v = brightdown } },
         { MODKEY|ControlMask,           XK_l,      spawn,          {.v = xscreenlock } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmdr } },
+	{ Mod4Mask,                     XK_t,      spawn,          {.v = termcmd } },
+	{ Mod4Mask,                     XK_f,      spawn,          {.v = firefox } },
+	{ Mod4Mask,                     XK_c,      spawn,          {.v = chromium } },
+	{ Mod4Mask,                     XK_p,      spawn,          {.v = pidgin } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
