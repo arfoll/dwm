@@ -34,6 +34,7 @@ static const Bool resizehints = False; /* True means respect size hints in tiled
 #include "bstack.c"
 #include "bstackhoriz.c"
 #include "grid.c"
+#include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -42,6 +43,8 @@ static const Layout layouts[] = {
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
+ 	{ "[@]",      spiral },
+ 	{ "[\\]",      dwindle },
 };
 
 /* key definitions */
@@ -105,6 +108,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_e,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },

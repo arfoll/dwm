@@ -30,6 +30,7 @@ static const Bool resizehints = True; /* True means respect size hints in tiled 
 #include "bstack.c"
 #include "bstackhoriz.c"
 #include "grid.c"
+#include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -38,6 +39,8 @@ static const Layout layouts[] = {
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
+ 	{ "[@]",      spiral },
+ 	{ "[\\]",      dwindle },
 };
 
 /* key definitions */
