@@ -5,12 +5,12 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*";
+static const char font[]            = "-*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#bf6600";
-static const char selbgcolor[]      = "#bf6600";
+static const char selbordercolor[]  = "#008f15";
+static const char selbgcolor[]      = "#008f15";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
