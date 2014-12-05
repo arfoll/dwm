@@ -39,6 +39,7 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 #include "bstack.c"
 #include "bstackhoriz.c"
 #include "grid.c"
+#include "fibonacci.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
@@ -47,6 +48,8 @@ static const Layout layouts[] = {
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
+ 	{ "[@]",      spiral },
+ 	{ "[\\]",      dwindle },
 };
 
 /* key definitions */
