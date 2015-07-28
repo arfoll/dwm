@@ -60,6 +60,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenumcmd[] = { "dmenu_mocp", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
 static const char *termcmdr[]  = { "urxvt", "-rv", NULL };
 static const char *termcmd[]  = { "urxvt",  NULL };
 static const char *firefox[] = { "firefox", NULL };
@@ -87,6 +88,7 @@ static Key keys[] = {
         { 0,                            XF86XK_MonBrightnessDown,   spawn, {.v = brightdown } },
         { MODKEY|ControlMask,           XK_l,      spawn,          {.v = xscreenlock } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_minus,  spawn,          {.v = dmenumcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmdr } },
 	{ Mod4Mask,                     XK_t,      spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          {.v = firefox } },
