@@ -1,4 +1,5 @@
 dwm
+*.orig
 *.o
 *.swp
 *.~
