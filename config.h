@@ -5,7 +5,8 @@
 #include <X11/XF86keysym.h>
 
 /* appearance */
-static const char font[]            = "-*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*";
+//static const char font[]            = "-*-terminus-medium-r-*-*-18-*-*-*-*-*-*-*";
+static const char font[]            = "-*-fixed-medium-r-*-*-18-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
@@ -44,7 +45,7 @@ static const Layout layouts[] = {
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
  	{ "[@]",      spiral },
- 	{ "[\\]",      dwindle },
+ 	{ "[\\]",     dwindle },
 };
 
 /* key definitions */
@@ -60,8 +61,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmdr[]  = { "urxvt", "-rv", NULL };
-static const char *termcmd[]  = { "urxvt",  NULL };
+static const char *termcmdr[]  = { "xterm", "-class", "xterm-dark", NULL };
+static const char *termcmd[]  = { "xterm",  NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *chromium[] = { "chromium", NULL };
 static const char *pidgin[] = { "pidgin", NULL};
@@ -72,8 +73,8 @@ static const char *voldown[] = { "amixer", "set", "Master", "5%-", "unmute", NUL
 static const char *voltoggle[] = { "amixer", "set", "Master", "toggle", NULL };
 
 /* backlight */
-static const char *brightup[] = { "xbacklight", "+20", NULL };
-static const char *brightdown[] = { "xbacklight", "-20", NULL };
+static const char *brightup[] = { "xbacklight", "+5", NULL };
+static const char *brightdown[] = { "xbacklight", "-5", NULL };
 
 /* screen lock */
 static const char *xscreenlock[] = { "slimlock", NULL };
