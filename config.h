@@ -75,7 +75,6 @@ static const char *termcmdr[]  = { "urxvt", "-rv", NULL };
 static const char *termcmd[]  = { "urxvt",  NULL };
 static const char *firefox[] = { "firefox", NULL };
 static const char *chromium[] = { "chromium", NULL };
-static const char *pidgin[] = { "pidgin", NULL};
 
 /* audio */
 static const char *volup[] = { "amixer", "set", "Master", "5%+", "unmute", NULL };
